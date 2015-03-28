@@ -3,7 +3,7 @@
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/fbsdk.js"></script>
 </head>
 <body>
@@ -16,9 +16,7 @@
 	<div id="resultsinfo">
 
 
-	<p>You're travelling</p>
-
-	<p>??? miles for marriage equality</p>
+	<p>I'm travelling <span id="milecount"></span> miles for marriage equality</p>
 
 	<p> </p>
 
@@ -31,39 +29,34 @@
 	        <div class="panel panel-default">
 	            <div class="panel-heading">
 	                <h4 class="panel-title">
-	                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
+	                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">I want to vote closer</a>
 	                </h4>
 	            </div>
 	            <div id="collapseOne" class="panel-collapse collapse in">
 	                <div class="panel-body">
-	                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                        <p>To update your voter registration address, you will need to use form <a href="http://www.checktheregister.ie/PublicPages/AppForms.aspx" target="_blank">RFA3</a>. Take this form to your nearest Garda station with photo ID, so that they can confirm your identity. The completed form needs to arrive at your council at least 15 days before the referendum.</a></p>
 	                </div>
 	            </div>
 	        </div>
 	        <div class="panel panel-default">
 	            <div class="panel-heading">
 	                <h4 class="panel-title">
-	                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">I want to vote closer</a>
+	                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">I want to donate</a>
 	                </h4>
 	            </div>
 	            <div id="collapseTwo" class="panel-collapse collapse">
 	                <div class="panel-body">
-	                    <p>To update your voter registration address, you will need to use form <a href="http://www.checktheregister.ie/PublicPages/AppForms.aspx" target="_blank">RFA3</a>. Take this form to your nearest Garda station with photo ID, so that they can confirm your identity. The completed form needs to arrive at your council at least 15 days before the referendum.</a></p>
+	                          	To donate, visit yesequality.ie's <a href="https://www.yesequality.ie/donate/">donation page</a>.
+	                	<p><b>Where does the money go?</b></p>
+<p>&euro;25 = 100 badges to help spread the Yes Equality message</p>
+<p>&euro;50 = We can print 5,000 Yes Equality leaflets for canvassing in communities throughout the country</p>
+<p>&euro;75 = We can print and install 10 Yes Equality posters in local communities</p>
+<p>&euro;100 = We can run a Facebook ad for 2 weeks, with a total reach of 40,600 people
+</p>
 	                </div>
 	            </div>
 	        </div>
-	        <div class="panel panel-default">
-	            <div class="panel-heading">
-	                <h4 class="panel-title">
-	                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Something goes here</a>
-	                </h4>
-	            </div>
-	            <div id="collapseThree" class="panel-collapse collapse">
-	                <div class="panel-body">
-	                	Some text
-	                </div>
-	            </div>
-	        </div>
+	
 	    </div>
 	</div>
 
@@ -99,7 +92,7 @@ $(document).ready(function(){
 	showTwitterShareButton(twitterBtnHref);
 
 	$(".collapse").collapse()
-
+	$("#milecount").text(miles);
 });
 
 
