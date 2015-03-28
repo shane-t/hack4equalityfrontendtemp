@@ -5,6 +5,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="js/bootstrap.min.js"></script>
 <script src="js/fbsdk.js"></script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {parsetags: 'explicit'}
+</script>
+
 </head>
 <body>
 
@@ -72,7 +77,6 @@
 
 		<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
 		
-		<script src="https://apis.google.com/js/plusone.js"></script>
 		<g:plus action="share" annotation="bubble"></g:plus>
 	</div>
 
@@ -89,10 +93,11 @@ $(document).ready(function(){
 
 	var twitterBtnHref = "https://twitter.com/share?text=" + shareText + "&url=" + encodedUrl + "&hashtags=" + hashTags + "&counturl=" + countUrl + "&via=yesequality2015";
 
-	showTwitterShareButton(twitterBtnHref);
 
-	$(".collapse").collapse()
 	$("#milecount").text(miles);
+	showTwitterShareButton(twitterBtnHref);
+gapi.plusone.go();
+	$(".collapse").collapse()
 });
 
 
