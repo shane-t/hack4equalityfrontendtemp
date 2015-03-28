@@ -19,6 +19,8 @@
        this.toLocation.latitude = latitude;
        this.toLocation.longitude = longitude;
 
+       this.drawToLocationMap(this.toLocation);
+
      },
 
      setFromLocation : function (name, latitude, longitude) {
@@ -34,7 +36,7 @@
      IMAGEEXTENTTOP   : 55.4453331,
      IMAGEEXTENTBOTTOM : 51.1499991,
 
-     getXYForLatLng : function ( latitude, longitude ) {
+     getXYForLngLat : function (  longitude, latitude ) {
 
        var x = this.$canvas.width() * ( longitude - this.IMAGEEXTENTLEFT ) / ( this.IMAGEEXTENTRIGHT - this.IMAGEEXTENTLEFT ),
          y = this.$canvas.height() * ( latitude - this.IMAGEEXTENTBOTTOM ) / ( this.IMAGEEXTENTTOP - this.IMAGEEXTENTBOTTOM );
@@ -45,6 +47,10 @@
      },
 
      drawToLocationMap : function ( loc ) {
+      var xy = getXYForLngLat(loc.longitude, loc.latitude);
+
+      ctx.fillStyle = "#F00";
+      ctx.fillRect(xy[0], xy[1], 2, 2);
 
      },
 
