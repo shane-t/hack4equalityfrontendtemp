@@ -1,0 +1,55 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+
+<div id="map">
+</div>
+<div id="resultsinfo">
+
+
+<p>You're travelling</p>
+
+<p>??? miles for marriage equality</p>
+
+<p> </p>
+
+</div>
+<div id="sharebuttons">
+	<a class="" id="twittershare" href="" style="display:none;">Tweet</a>
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+	var miles = 300;
+
+	var shareUrl = "http://www.google.ie?q=testtwo";
+	var encodedUrl = encodeURIComponent(shareUrl);
+	var shareText = "I will be travelling " + miles " miles for marriage equality";
+	var hashTags = "marref,milesformarriage";
+	var countUrl = "http://www.google.ie";
+
+	var twitterBtnHref = "https://twitter.com/share?text=" + shareText + "&url=" + encodedUrl + "&hashtags=" + hashTags + "&counturl=" + countUrl + "&via=yesequality2015";
+
+	showTwitterShareButton(twitterBtnHref);
+
+});
+
+
+function showTwitterShareButton(twitterBtnHref){
+	$("#twittershare").attr('href', twitterBtnHref);
+	$("#twittershare").removeAttr('style');
+	$("#twittershare").addClass('twitter-share-button');
+
+}
+
+
+	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+
+
+</body>
+</html>
