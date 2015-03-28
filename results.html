@@ -88,8 +88,7 @@
 $(document).ready(function(){
 
 	var miles = 300;
-
-	var shareUrl = "http://www.google.ie?q=testtwo";
+	var shareUrl = window.location.href;
 	var encodedUrl = encodeURIComponent(shareUrl);
 	var shareText = "I will be travelling " + miles + " miles for marriage equality";
 	var hashTags = "marref,milesformarriage";
